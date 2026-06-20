@@ -26,12 +26,11 @@ text-align:center;
 position:sticky;
 top:0;
 }
-
 nav a{
-color:white;
-text-decoration:none;
-margin:15px;
-font-weight:bold;
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-weight:bold;
 }
 
 header{
@@ -96,22 +95,47 @@ margin-top:40px;
     vertical-align: middle;
     margin-right: 10px;
 }
+.menu-btn{
+    font-size: 35px;
+    color: white;
+    cursor: pointer;
+    text-align: right;
+    padding: 15px;
+}
 
+#menu{
+    display: none;
+    background: white;
+    padding: 20px;
+}
+
+#menu a{
+    display: block;
+    padding: 15px 0;
+    text-decoration: none;
+    color: #0a2342;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
 </style>
 </head>
 
 <body>
 
 <nav>
-<a href="#home">Accueil</a>
-<a href="#about">À propos</a>
-<a href="#education">Éducation</a>
-<a href="#experience">Expérience</a>
-<a href="#awards">Distinctions</a>
-<a href="#news">Actualités</a> 
-<a href="#projects">Projets</a>
-<a href="#social">Réseaux sociaux</a>
-<a href="#contact">Contact</a>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+    <div id="menu">
+        <a href="#home">Accueil</a>
+        <a href="#about">À propos</a>
+        <a href="#education">Éducation</a>
+        <a href="#experience">Expérience</a>
+        <a href="#projects">Projets</a>
+        <a href="#awards">Distinctions</a>
+        <a href="#news">Actualités</a>
+        <a href="#social">Réseaux sociaux</a>
+        <a href="#contact">Contact</a>
+    </div>
 </nav>
 <header id="home">
 
@@ -287,6 +311,17 @@ WhatsApp
 <footer>
 © 2026 Liya Allah-Ridy Farahane
 </footer>
+    <script>
+function toggleMenu() {
+    var menu = document.getElementById("menu");
+
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+}
+</script>
     </body>
 </html>
     
